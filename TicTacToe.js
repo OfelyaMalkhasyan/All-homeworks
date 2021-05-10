@@ -91,7 +91,7 @@ function runTicTacToe(size) {
         winnerIsReady = !winnerIsReady;
         winner = "Player 2! won";
         break;
-      } else if (i === 8) {
+      } else if (i === 8 && j === 7) {
         winnerIsReady = !winnerIsReady;
         winner = "Draw";
         break;
