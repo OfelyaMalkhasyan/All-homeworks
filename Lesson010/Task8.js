@@ -12,10 +12,9 @@ for (let i = 0; i < arr.length; i++) {
 let sumOfNumbers = newArray.reduce(function (acc, val) {
   return acc + val;
 });
-console.log(sumOfNumbers);
+console.log(sumOfNumbers); //1347
 
-// Write a function which calculates average age of users.
-
+// Write a function which calculates averageOfAge age of users.
 const users = [
   {
     username: "Yuri Gagarin",
@@ -29,7 +28,8 @@ const users = [
   },
 ];
 
-let b = { a: 1, b: 2, a: 3 };
-for (let key in b) {
-  console.log(b[b]);
-}
+let age =
+  users.reduce(function (acc, val) {
+    return acc + val.age;
+  }, 0) / users.length;
+console.log(age); //55
