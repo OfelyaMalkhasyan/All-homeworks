@@ -1,9 +1,9 @@
 // Filter
 //Given an array, return a new array that only includes the numbers.
 
-const arr = [1, 2, "a", true, {}, undefined, 55, false, "hi", null, 166, NaN];
+const users = [1, 2, "a", true, {}, undefined, 55, false, "hi", null, 166, NaN];
 
-let filteredArray = arr.filter(function (value) {
+let filteredArray = users.filter(function (value) {
   return parseFloat(value);
 });
 console.log(filteredArray);
@@ -25,7 +25,7 @@ let createNewArray = users.filter((users) => {
 });
 console.log(createNewArray); // [{ username: "Nil Armstrong, lang: "ENG" }]
 
-// Write a function which filters object by field.
+//Write a function which filters object by field.
 
 const users = [
   {
@@ -43,8 +43,9 @@ const users = [
     isAstronaut: false,
   },
 ];
-
-let getFelidByFelid = users.filter((users) => {
-  return users.splice("}");
-});
-console.log(getFelidByFelid);
+function filtered(users, val) {
+  return users.filter((element) => {
+    return element[val];
+  });
+}
+console.log(filtered(users, "isAstronaut"));
